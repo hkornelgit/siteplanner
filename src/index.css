@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+.thumbSlider {
+  background: rgba(0, 0, 0, 0.45);
+}
+.thumbSlider .swiper-slide {
+  width: 20% !important;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+}
+.thumbSlider {
+  height: 0px !important;
+  transition: all 0.2s ease;
+}
+
+section:hover .thumbSlider {
+  height: 180px !important;
+}
+section:hover .thumbSlider img {
+  max-height: 160px;
+}
+header .thumbSlider .swiper-slide {
+  width: 33.33% !important;
+}
+header:hover .thumbSlider {
+  height: 50px !important;
+}
+.thumbSlider .swiper-slide-thumb-active img {
+  box-shadow: 5px 5px 5px yellow;
+}
+.new-template,
+.block-add,
+.save-as-url,
+.save-as-image {
+  width: 60px;
+  height: 60px;
+  background: #ffc107;
+  position: relative;
+  border-radius: 60px;
+  transition: all .2s ease;
+}
+.new-template:hover,
+.block-add:hover,
+.save-as-url:hover,
+.save-as-image:hover {
+  box-shadow:3px 3px 9px rgba(0, 0, 0, 0.45)
+}
+.save-as-image:after {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  content: "";
+  transform: translate(-50%, -50%);
+  background: url("images/copy.png") center/contain no-repeat;
+  display: block;
+}
+.save-as-url:after {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  content: "";
+  transform: translate(-50%, -50%);
+  background: url("images/link.png") center/contain no-repeat;
+  display: block;
+}
+.block-add:after {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  content: "";
+  transform: translate(-50%, -50%);
+  background: url("images/add.png") center/contain no-repeat;
+  display: block;
+}
+.new-template:after {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  content: "";
+  transform: translate(-50%, -50%);
+  background: url("images/new-document.png") center/contain no-repeat;
+  display: block;
+}
+.block-list[data-opened="false"] {
+  display:none;
+}

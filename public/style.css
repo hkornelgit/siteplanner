@@ -1,0 +1,113 @@
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+header {
+    background: rgba(235, 64, 52, 0.2);
+}
+
+main {
+    background: rgba(66, 135, 245, 0.2);
+}
+
+footer {
+    background: rgba(50, 168, 82, 0.2);
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+button {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    background: transparent;
+}
+
+.addBlockCategory {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 99;
+    display:flex;
+    flex-direction: column  ;
+    text-align: right;
+}
+.addBlockCategory .categoryAdd {
+    width: 50px;
+    height: 50px;
+    font-weight: bold;
+    color: white;
+    background: #f55656;
+    text-decoration: none;
+    border-radius: 100px;
+    line-height: 1.4;
+    text-align: center;
+    font-size: 30px;
+    transition: all 0.2s ease;
+}
+.addBlockCategory .btn {
+    padding:.2rem;
+}
+.addBlockCategory .btn {
+    margin-top:2px !important;
+}
+.contentAdd:hover {
+    box-shadow: 1px 1px 10px #00000050;
+}
+.sectionBlock {
+    position: relative;
+}
+.sectionBlock:after {
+    transition: all 0.2s ease;
+}
+.sectionBlock:hover:after {
+    content: "";
+    top:0px;
+    left:0px;
+    position: absolute;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    display: block;
+    border:4px solid red;
+    z-index:99999;
+    pointer-events: none;
+}
+.options {
+    position:absolute;
+    left:1rem;
+    top:1rem;
+    z-index:9999;
+    display:none;
+}
+.sectionBlock:hover .options {
+    display:block;
+}
+.addComment,
+.deleteBlock {
+    border-radius:3px;
+    background:#f55656;
+    text-decoration:none;
+    padding:5px;
+    color:white;
+}
+img {
+    width:100%;
+}
+.draggable-container {
+    position: absolute;
+    z-index:999
+}
+
+.commentBox {
+    position: absolute;
+    top:50px;
+    left:15px;
+    z-index:999;
+    min-width:100px !important;
+    width: inherit;
+}
